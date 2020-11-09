@@ -259,10 +259,21 @@ a:hover {
 footer {
   padding: 40px;
   background-color: #c5d5cb;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+  opacity: 0;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 footer h1 {
   font-family: "Architects Daughter", cursive;
   font-size: 2.3rem;
+}
+
+.scroll-animation {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 /*# sourceMappingURL=styles.css.map */

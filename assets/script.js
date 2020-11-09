@@ -1,3 +1,5 @@
+//NAV SCRIPT
+
 const CONTACT = document.getElementById("contact")
 
 function isInViewport(element) {
@@ -18,3 +20,18 @@ document.addEventListener("scroll", () => {
 		document.querySelector("#nav-contact").classList.remove("active")
 	}
 })
+
+//FOOTER SCRIPT 
+const FOOTER = document.querySelector("footer")
+
+function scrollAppear()
+{
+	let footerPosition = FOOTER.getBoundingClientRect().top;
+	let windowPosition = window.innerHeight / 1.2;
+
+	if(footerPosition < windowPosition) {
+		FOOTER.classList.add('scroll-animation');
+	}
+}
+
+window.addEventListener('scroll', scrollAppear);

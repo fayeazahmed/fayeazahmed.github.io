@@ -222,9 +222,17 @@ a {
 footer {
   padding: 40px;
   background-color: #c5d5cb;
+  transform: translateY(-80px);
+  opacity: 0;
+  transition: all 0.4s;
 
   h1 {
     font-family: "Architects Daughter", cursive;
     font-size: 2.3rem;
   }
+}
+
+.scroll-animation {
+  opacity: 1;
+  transform: translateY(0);
 }
