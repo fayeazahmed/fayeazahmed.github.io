@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Portfolio | Fayeaz Ahmed</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<link rel="shortcut icon" href="assets/icon.png" type="image/x-icon">
+	<!-- styles -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+		integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+		type="text/css" />
+	<link rel="stylesheet" href="assets/styles.css">
+</head>
+
+
+<body>
+	<nav class="nav-bar w-100">
+		<div class="container d-flex justify-content-between align-items-center">
+			<p class="m-0">Fayeaz Ahmed</p>
+			<div class="d-flex">
+				<a id="nav-home" class="nav-link active" href="#">Home</a>
+				<a id="nav-contact" class="nav-link" href="#contact">Contact</a>
+			</div>
+		</div>
+	</nav>
+	<div class="introduction container d-flex flex-column justify-content-center">
+		<img class="m-auto" src="assets/dp.png" alt="display picture">
+		<div class="introduction__intro w-100 d-flex flex-column justify-content-center">
+			<div class="mb-3">
+				<h4 class="m-0">FAYEAZ AHMED</h4>
+				<h6 class="m-0">
+					<i class="fa fa-map-marker"></i> DHAKA, BANGLADESH
+				</h6>
+			</div>
+		</div>
+	</div>
+	<section class="portfolio container">
+		<h2>MY WORKS:</h2>
+		<div class="mt-5">
+			<div class="portfolio__project d-flex justify-content-center align-items-center">
+				<div class="portfolio__tech-img d-flex flex-column align-items-end justify-content-center">
+					<img src="assets/projects/html5.png" alt="html5">
+					<img src="assets/projects/css3.png" alt="css3">
+				</div>
+				<div class="mx-4">
+					<img class=" portfolio__project-image" src="assets/projects/facebook.png" alt="facebook">
+				</div>
+				<div class="portfolio__project-desc p-0">
+					<p>Landing page of Facebook. This is just to make sure the core of my html page structures,
+						positioning, display etc are in line</p>
+				</div>
+			</div>
+			<div class="portfolio__project mt-5 d-flex justify-content-center align-items-center">
+				<div class="portfolio__tech-img d-flex flex-column align-items-end justify-content-center">
+					<img src="assets/projects/bootstrap.png" alt="bootstrap">
+					<img src="assets/projects/sass.png" alt="sass">
+				</div>
+				<div class="mx-4">
+					<img class=" portfolio__project-image" src="assets/projects/portfolio.PNG" alt="portfolio">
+				</div>
+				<div class="portfolio__project-desc p-0">
+					<p>Next obviously this portfolio website, made using bootstrap and css preprocessor sass,
+						and these covered the VERY basics of front-end.</p>
+				</div>
+			</div>
+			<a href="https://url-mod.herokuapp.com/">
+				<div class="portfolio__project mt-5 d-flex justify-content-center align-items-center">
+					<div class="portfolio__tech-img d-flex flex-column align-items-end justify-content-center">
+						<img src="assets/projects/js.png" alt="js">
+						<img src="assets/projects/node.png" alt="node">
+					</div>
+					<div class="mx-4">
+						<img class=" portfolio__project-image" src="assets/projects/urlmod.PNG" alt="urlmod">
+					</div>
+					<div class="portfolio__project-desc p-0">
+						<p>Moving on to my learning of back-end, setting up server, using database
+							through node and express. This is just a basic url shortener like website where instead of
+							shortening,
+							you put whatever thing you want after the base address.</p>
+					</div>
+				</div>
+			</a>
+			<a href="https://e-commerce-codeigniter.000webhostapp.com/">
+				<div class="portfolio__project mt-5 d-flex justify-content-center align-items-center">
+					<div class="portfolio__tech-img d-flex flex-column align-items-end justify-content-center">
+						<img src="assets/projects/php.png" alt="php">
+						<img src="assets/projects/ci.png" alt="ci">
+						<img src="assets/projects/mysql.png" alt="mysql">
+					</div>
+					<div class="mx-4">
+						<img class=" portfolio__project-image" src="assets/projects/ecommerce.PNG" alt="ecommerce">
+					</div>
+					<div class="portfolio__project-desc p-0">
+						<p>As lot of the development stuff in my location is still being done using php and php based
+							frameworks, thought it would be wise to learn this classic server side language and a simple
+							framework. So this a sample e-commerce site made using codeigniter 4 with dynamic product
+							adding system.</p>
+					</div>
+				</div>
+			</a>
+			<a href="https://bloodlocatorbd.herokuapp.com/">
+				<div class="portfolio__project mt-5 d-flex justify-content-center align-items-center">
+					<div class="portfolio__tech-img d-flex flex-column align-items-end justify-content-center">
+						<img src="assets/projects/react.png" alt="react">
+						<img src="assets/projects/node.png" alt="node">
+						<img src="assets/projects/mongo.png" alt="mongo">
+					</div>
+					<div class="mx-4">
+						<img class=" portfolio__project-image" src="assets/projects/blood.PNG" alt="bloodlocator">
+					</div>
+					<div class="portfolio__project-desc portfolio__project-desc--mapbox p-0">
+						<p>Finally something complete using MERN stack. An app where one can find blood donor for
+							specific
+							blood group in the map (using <span style="color: blue;">MAPBOX</span> api), and also
+							add
+							their own entry to the database. Simple,
+							but usable.</p>
+					</div>
+				</div>
+			</a>
+		</div>
+	</section>
+	<div class="container bio">
+		<p class="w-75 m-auto">Hello, I'm Ahmed. Currently studying CSE in American International University -
+			Bangladesh (<a href="https://www.aiub.edu/">AIUB</a>). And
+			learning
+			full stack web development using online resources. Confident that I'm on the right path.
+			Contact me for any inquiry or assignment.</p>
+	</div>
+	<div class="container contact d-flex justify-content-center align-items-center" id="contact">
+		<a href="mailto:r10.ahmed@yahoo.com">
+			<div class="contact__element contact__element--yahoo" href="mailto:r10.ahmed@yahoo.com">
+				<i class="fa fa-yahoo fa-2x" aria-hidden="true"></i>
+				<p class="d-inline-block">Mail me on Yahoo</p>
+			</div>
+		</a>
+		<a href="https://www.facebook.com/fayeaz.ahmed/">
+			<div class="contact__element contact__element--facebook" href="https://www.facebook.com/fayeaz.ahmed/">
+				<i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+				<p class="d-inline-block">Message me on facebook</p>
+			</div>
+		</a>
+		<a href="https://www.linkedin.com/in/fayeaz-ahmed-9273301b3/">
+			<div class="contact__element contact__element--linkedin"
+				href="https://www.linkedin.com/in/fayeaz-ahmed-9273301b3/">
+				<i class="fa fa-linkedin fa-2x" aria-hidden="true"></i>
+				<p class="d-inline-block">Find me on Linkedin</p>
+			</div>
+		</a>
+		<a href="https://www.instagram.com/fayeazahmed/">
+			<div class="contact__element contact__element--instagram" href="https://www.instagram.com/fayeazahmed/">
+				<i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+				<p class="d-inline-block">See what's up with me on instagram</p>
+			</div>
+		</a>
+	</div>
+	<footer class="container">
+		<h1>
+			©️FAYEAZ AHMED
+		</h1>
+	</footer>
+
+	<script src="assets/script.js"></script>
+</body>
+
+</html>

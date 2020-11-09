@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Noto+Sans+JP:wght@700&family=Arimo&family=Acme&family=Vollkorn:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.active {
+  border-bottom: 2px solid;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.nav-bar {
+  background-color: #c5d5cb;
+  position: fixed;
+  z-index: 20;
+  p {
+    font-family: "Architects Daughter", cursive;
+    font-size: 25px;
+  }
+}
+
+.introduction {
+  height: 340px;
+  position: relative;
+
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  &__intro {
+    position: absolute;
+    background: linear-gradient(#4b525d, white);
+    color: white;
+    left: 0;
+    bottom: -45px;
+    height: 150px;
+    opacity: 0.9;
+
+    h4,
+    h6 {
+      font-family: "Arimo", sans-serif;
+      text-shadow: -2px 3px 2px black;
+    }
+  }
+}
+
+.portfolio {
+  margin-top: 49px;
+  padding-top: 18px;
+
+  h2 {
+    font-family: "Acme", sans-serif;
+  }
+
+  &__project {
+    transition: all 0.3s;
+
+    @media (max-width: 990px) {
+      flex-direction: column;
+    }
+
+    &:hover {
+      background-color: #c5d5cb;
+    }
+  }
+
+  &__tech-img {
+    margin-left: 100px;
+
+    @media (max-width: 990px) {
+      margin: 10px 0;
+      flex-direction: row !important;
+    }
+
+    img {
+      height: 85px;
+      width: 85px;
+
+      @media (max-width: 990px) {
+        margin: 0 5px;
+      }
+    }
+  }
+
+  &__project-image {
+    height: auto;
+    width: 373px;
+  }
+
+  &__project-desc {
+    max-width: 250px;
+
+    @media (max-width: 990px) {
+      max-width: 100%;
+      margin-top: 10px;
+    }
+
+    p {
+      font-family: "Vollkorn", serif;
+      font-size: 1.17rem;
+      text-align: end;
+
+      @media (max-width: 990px) {
+        text-align: center;
+      }
+    }
+
+    &--mapbox {
+      a {
+        color: blue;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.bio {
+  background: linear-gradient(white, #4b525d);
+
+  @media (max-width: 770px) {
+    padding: 30px 15px;
+  }
+
+  p {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 1.25rem;
+    padding: 60px 70px;
+    color: darkblue;
+    text-shadow: -1px 1px 3px white;
+
+    @media (max-width: 770px) {
+      padding: 0;
+      width: 100% !important;
+    }
+  }
+
+  a {
+    color: #9100ff;
+  }
+}
+
+.contact {
+  background-color: #c2dde5;
+  padding: 25px 15px;
+  overflow: hidden;
+
+  @media (max-width: 770px) {
+    flex-direction: column;
+  }
+
+  &__element {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 30px;
+
+    @media (max-width: 770px) {
+      width: 355px;
+      margin: 4px 0;
+    }
+
+    p {
+      white-space: nowrap;
+      margin: 0;
+      max-width: 0;
+      overflow: hidden;
+      transition: all 0.5s;
+      color: white;
+
+      @media (max-width: 770px) {
+        max-width: 100%;
+      }
+    }
+
+    i {
+      margin: auto 1rem;
+      color: white;
+    }
+
+    &:hover {
+      p {
+        max-width: 300px;
+      }
+    }
+
+    &--yahoo {
+      background-color: #4a00a0;
+    }
+    &--facebook {
+      background-color: #1778f2;
+    }
+    &--linkedin {
+      background-color: #006192;
+    }
+    &--instagram {
+      background-color: #3f729b;
+    }
+  }
+}
+
+footer {
+  padding: 40px;
+  background-color: #c5d5cb;
+
+  h1 {
+    font-family: "Architects Daughter", cursive;
+    font-size: 2.3rem;
+  }
+}
