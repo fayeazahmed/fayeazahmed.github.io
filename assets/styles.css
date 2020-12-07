@@ -3,8 +3,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -49,7 +48,6 @@ a:hover {
 
 .introduction__intro {
   position: absolute;
-  background: -webkit-gradient(linear, left top, left bottom, from(#4b525d), to(white));
   background: linear-gradient(#4b525d, white);
   color: white;
   left: 0;
@@ -74,16 +72,12 @@ a:hover {
 }
 
 .portfolio__project {
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
 @media (max-width: 990px) {
   .portfolio__project {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
@@ -98,10 +92,7 @@ a:hover {
 @media (max-width: 990px) {
   .portfolio__tech-img {
     margin: 10px 0;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
+    flex-direction: row !important;
   }
 }
 
@@ -153,7 +144,6 @@ a:hover {
 }
 
 .bio {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#4b525d));
   background: linear-gradient(white, #4b525d);
 }
 
@@ -190,20 +180,13 @@ a:hover {
 
 @media (max-width: 770px) {
   .contact {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 
 .contact__element {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 15px 20px;
   border-radius: 30px;
 }
@@ -220,7 +203,6 @@ a:hover {
   margin: 0;
   max-width: 0;
   overflow: hidden;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   color: white;
 }
@@ -244,6 +226,10 @@ a:hover {
   background-color: #4a00a0;
 }
 
+.contact__element--github {
+  background-color: #333333;
+}
+
 .contact__element--facebook {
   background-color: #1778f2;
 }
@@ -259,10 +245,8 @@ a:hover {
 footer {
   padding: 40px;
   background-color: #c5d5cb;
-  -webkit-transform: translateY(-80px);
-          transform: translateY(-80px);
+  transform: translateY(-80px);
   opacity: 0;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 
@@ -273,7 +257,6 @@ footer h1 {
 
 .scroll-animation {
   opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
 /*# sourceMappingURL=styles.css.map */
