@@ -117,19 +117,12 @@ a {
       font-family: "Vollkorn", serif;
       font-size: 1.17rem;
       text-align: end;
+      max-height: 255px;
+      overflow-y: scroll;
+      padding-right: 3px;
 
       @media (max-width: 990px) {
         text-align: center;
-      }
-    }
-
-    &--mapbox {
-      a {
-        color: blue;
-
-        &:hover {
-          text-decoration: none;
-        }
       }
     }
   }

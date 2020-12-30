@@ -127,20 +127,15 @@ a:hover {
   font-family: "Vollkorn", serif;
   font-size: 1.17rem;
   text-align: end;
+  max-height: 255px;
+  overflow-y: scroll;
+  padding-right: 3px;
 }
 
 @media (max-width: 990px) {
   .portfolio__project-desc p {
     text-align: center;
   }
-}
-
-.portfolio__project-desc--mapbox a {
-  color: blue;
-}
-
-.portfolio__project-desc--mapbox a:hover {
-  text-decoration: none;
 }
 
 .bio {
