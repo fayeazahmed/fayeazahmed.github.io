@@ -1,37 +1,32 @@
 //NAV SCRIPT
 
-const CONTACT = document.getElementById("contact")
+const HOME_BTN = document.getElementById("nav-home");
+const MAIN = document.getElementById("main");
+HOME_BTN.addEventListener("click", () => (MAIN.scrollTop = 0));
 
-function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
+//SCROLL SCRIPT
 
-    return rect.bottom > 0 &&
-        rect.right > 0 &&
-        rect.left < (window.innerWidth || document.documentElement.clientWidth) /* or $(window).width() */ &&
-        rect.top < (window.innerHeight || document.documentElement.clientHeight)
+const SCROLLBAR = document.getElementById("scroll-bar");
+const MAIN_HEIGHT = MAIN.scrollHeight;
+const BIO = document.getElementById("bio");
+
+MAIN.addEventListener("scroll", () => {
+  const scrolledHeight = MAIN.scrollTop;
+  let scrollBarHeight = (scrolledHeight / MAIN_HEIGHT) * 100;
+  if (isElementInViewport(BIO)) {
+    scrollBarHeight = 100;
+  }
+  SCROLLBAR.style.height = scrollBarHeight + "%";
+  SCROLLBAR.style.top = scrolledHeight + "px";
+});
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return (
+    rect.top >= 0 &&
+    rect.left >= 0 &&
+    rect.bottom <=
+      (window.innerHeight || document.documentElement.clientHeight) &&
+    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+  );
 }
-
-document.addEventListener("scroll", () => {
-	if(isInViewport(CONTACT)) {
-		document.querySelector("#nav-contact").classList.add("active")
-		document.querySelector("#nav-home").classList.remove("active")
-	} else {
-		document.querySelector("#nav-home").classList.add("active")
-		document.querySelector("#nav-contact").classList.remove("active")
-	}
-})
-
-//FOOTER SCRIPT 
-const FOOTER = document.querySelector("footer")
-
-function scrollAppear()
-{
-	let footerPosition = FOOTER.getBoundingClientRect().top;
-	let windowPosition = window.innerHeight / 1.2;
-
-	if(footerPosition < windowPosition) {
-		FOOTER.classList.add('scroll-animation');
-	}
-}
-
-window.addEventListener('scroll', scrollAppear);
