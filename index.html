@@ -20,35 +20,75 @@
 <body>
 
 	<nav>
-		<div class="container d-flex justify-content-between align-items-center">
-			<p class="m-0">Fayeaz Ahmed</p>
-			<div class="d-flex">
-				<a id="nav-home" class="nav-link" href="#">Go to top</a>
-				<a id="nav-contact" class="nav-link" href="#bio">Go to bottom</a>
-			</div>
-		</div>
+		<p class="container">Fayeaz Ahmed</p>
 	</nav>
 
-	<main id="main" class="container pt-4">
-		<div id="scroll-bar"></div>
-		<div id="introduction" class="introduction">
-			<img class="m-auto" src="assets/dp.png" alt="display picture">
-			<div class="mt-2">
+	<main class="container py-4">
+
+		<div class="nav">
+			<button class="btn --activated">Intro</button>
+			<button class="btn">Portfolio</button>
+		</div>
+
+		<img class="dp" src="assets/dp.png" alt="display picture">
+		<div class="spa introduction page--activated">
+			<div class="introduction__info">
 				<h4 class="m-0">FAYEAZ AHMED</h4>
 				<h6 class="m-0"><i class="fa fa-map-marker"></i> DHAKA, BANGLADESH</h6>
 			</div>
+
+
+			<div id="bio" class="bio container">
+				<p>Hello, I'm Ahmed. Currently studying CSE in American International University -
+					Bangladesh (<a href="https://www.aiub.edu/">AIUB</a>), and
+					learning
+					full stack web application development. Confident that I'm on the right path.
+					Contact me for any inquiry or assignment.</p>
+			</div>
+
 		</div>
+		<div class="spa projects container">
+			<div class="carousel-controller">
+				<i class="fa fa-angle-left fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-angle-right fa-3x" aria-hidden="true"></i>
+			</div>
+			<section class="technologies">
+				<div class="technologies__container">
+					<div class="technologies__buttons">
+						<img src="assets/projects/htmlcss.png" alt="htmlcss">
+					</div>
+					<div class="technologies__buttons">
+						<img src="assets/projects/bssass.png" alt="bsass">
+					</div>
+					<div class="technologies__buttons">
+						<img src="assets/projects/nodejs.png" alt=nodejs">
+					</div>
+					<div class="technologies__buttons">
+						<img src="assets/projects/phpci.png" alt=phpci">
+					</div>
+					<div class="technologies__buttons">
+						<img src="assets/projects/mern.png" alt=mern">
+					</div>
+					<div class="technologies__buttons">
+						<img src="assets/projects/djangoreact.png" alt=djangoreact">
+					</div>
+					<div class="technologies__buttons">
+						<img src="assets/projects/pern.png" alt=pern">
+					</div>
+				</div>
+			</section>
+			<section class="portfolio">
+				<div class="h2class">
+					<div class="fa fa-arrow-up arrow"></div>
+					<h2>Select a tech stack to view</h2>
+				</div>
 
-		<section class="portfolio">
-			<h2>MY PROJECTS:</h2>
-
-			<div class="mt-4">
 				<div class="portfolio__project">
 					<div class="portfolio__tech-img">
 						<img src="assets/projects/html5.png" alt="html5">
 						<img src="assets/projects/css3.png" alt="css3">
 					</div>
-					<div class="mx-4">
+					<div class="portfolio__imgcontainer">
 						<img class=" portfolio__project-image" src="assets/projects/facebook.png" alt="facebook">
 					</div>
 					<div class="portfolio__project-desc p-0">
@@ -56,128 +96,151 @@
 							positioning, display etc are in line</p>
 					</div>
 				</div>
-			</div>
 
-			<div class="portfolio__project">
-				<div class="portfolio__tech-img">
-					<img src="assets/projects/bootstrap.png" alt="bootstrap">
-					<img src="assets/projects/sass.png" alt="sass">
-				</div>
-				<div class="mx-4">
-					<img class=" portfolio__project-image" src="assets/projects/portfolio.PNG" alt="portfolio">
-				</div>
-				<div class="portfolio__project-desc p-0">
-					<p>Next obviously the portfolio site, made using bootstrap and css preprocessor sass,
-						and these covered the VERY basics of front-end.</p>
-				</div>
-			</div>
-
-			<a href="https://url-mod.herokuapp.com/">
 				<div class="portfolio__project">
 					<div class="portfolio__tech-img">
-						<img src="assets/projects/js.png" alt="js">
-						<img src="assets/projects/node.png" alt="node">
+						<img src="assets/projects/bootstrap.png" alt="bootstrap">
+						<img src="assets/projects/sass.png" alt="sass">
 					</div>
-					<div class="mx-4">
-						<img class=" portfolio__project-image" src="assets/projects/urlmod.PNG" alt="urlmod">
-					</div>
-					<div class="portfolio__project-desc p-0">
-						<p>Moving on to my learning of back-end, setting up server, using database
-							through node and express. This is just a basic url shortener like website where instead
-							of
-							shortening,
-							you put whatever thing you want after the base address.</p>
-					</div>
-				</div>
-			</a>
-
-			<a href="https://e-commerce-codeigniter.000webhostapp.com/">
-				<div class="portfolio__project">
-					<div class="portfolio__tech-img">
-						<img src="assets/projects/php.png" alt="php">
-						<img src="assets/projects/ci.png" alt="ci">
-						<img src="assets/projects/mysql.png" alt="mysql">
-					</div>
-					<div class="mx-4">
-						<img class=" portfolio__project-image" src="assets/projects/ecommerce.PNG" alt="ecommerce">
+					<div class="portfolio__imgcontainer">
+						<img class=" portfolio__project-image" src="assets/projects/portfolio.PNG" alt="portfolio">
 					</div>
 					<div class="portfolio__project-desc p-0">
-						<p>As lot of the development stuff in my location is still being done using php and php
-							based
-							frameworks, thought it would be wise to learn this classic server side language and a
-							simple
-							framework. So this a sample e-commerce site made using codeigniter 4 with dynamic
-							product
-							adding system.</p>
+						<p>Next this portfolio site, made using bootstrap and css preprocessor sass,
+							to cover the VERY basics of front-end. Of course I twisted the design up a bit after a
+							little more experience</p>
 					</div>
 				</div>
-			</a>
 
-			<a href="https://bloodlocatorbd.herokuapp.com/">
-				<div class="portfolio__project">
-					<div class="portfolio__tech-img">
-						<img src="assets/projects/react.png" alt="react">
-						<img src="assets/projects/node.png" alt="node">
-						<img src="assets/projects/mongo.png" alt="mongo">
+				<a href="https://url-mod.herokuapp.com/">
+					<div class="portfolio__project">
+						<div class="portfolio__tech-img">
+							<img src="assets/projects/js.png" alt="js">
+							<img src="assets/projects/node.png" alt="node">
+						</div>
+						<div class="portfolio__imgcontainer">
+							<img class=" portfolio__project-image" src="assets/projects/urlmod.PNG" alt="urlmod">
+						</div>
+						<div class="portfolio__project-desc p-0">
+							<p>Moving on to my learning of back-end, setting up server, using database
+								through node and express. This is just a basic url shortener like website where instead
+								of
+								shortening,
+								you put whatever thing you want after the base address.</p>
+						</div>
 					</div>
-					<div class="mx-4">
-						<img class=" portfolio__project-image" src="assets/projects/blood.PNG" alt="bloodlocator">
-					</div>
-					<div class="portfolio__project-desc p-0">
-						<p>Finally something complete using MERN stack. An app where one can find blood donor for
-							specific
-							blood group in the map (using <span style="color: blue;">MAPBOX</span> api), and also
-							add
-							their own entry to the database. Simple,
-							but usable.</p>
-					</div>
-				</div>
-			</a>
+				</a>
 
-			<a href="https://fayeazahmed.github.io/notchaldal/index.html">
-				<div class="portfolio__project">
-					<div class="portfolio__tech-img">
-						<img src="assets/projects/react.png" alt="react">
-						<img src="assets/projects/django.png" alt="django">
-						<img src="assets/projects/postgresql.png" alt="postgresql">
+				<a href="https://e-commerce-codeigniter.000webhostapp.com/">
+					<div class="portfolio__project">
+						<div class="portfolio__tech-img">
+							<img src="assets/projects/php.png" alt="php">
+							<img src="assets/projects/ci.png" alt="ci">
+							<img src="assets/projects/mysql.png" alt="mysql">
+						</div>
+						<div class="portfolio__imgcontainer">
+							<img class=" portfolio__project-image" src="assets/projects/ecommerce.PNG" alt="ecommerce">
+						</div>
+						<div class="portfolio__project-desc p-0">
+							<p>As lot of the development stuff in my location is still being done using php and php
+								based
+								frameworks, thought it would be wise to learn this classic server side language and a
+								simple
+								framework. So this a sample e-commerce site made using codeigniter 4 with dynamic
+								product
+								adding system.</p>
+						</div>
 					</div>
-					<div class="mx-4">
-						<img class=" portfolio__project-image" src="assets/projects/notchaldal.png" alt="notchaldal">
-					</div>
-					<div class="portfolio__project-desc p-0">
-						<p> E-commerce web app, with django as backend taking care of postgresql migrations, and react
-							on
-							front. This is a somewhat
-							repica of <span style="color: blue;">Chaldal.com</span> which is a great site to order
-							everyday stuff. This is quite a full stack project
-							for my current caliber. Accounts can be created by users, orders and
-							ordered products are added to their databases and relations established with foreign
-							keys.
-							If 10 orders are done from an account, it will get 10% discount on next orders. Django
-							restapi and their authentication system is used. In the front end, react with
-							react-router
-							and redux were used.
-							Product adding can be done from django admin dashboard, although as the server is hosted
-							on
-							heroku, new images can't be added as
-							heroku don't provide static file storage. So I just added 2/3 products per category, as
-							this
-							is just a demonstration.
-						</p>
-					</div>
-				</div>
-			</a>
+				</a>
 
-		</section>
+				<a href="https://bloodlocatorbd.herokuapp.com/">
+					<div class="portfolio__project">
+						<div class="portfolio__tech-img">
+							<img src="assets/projects/react.png" alt="react">
+							<img src="assets/projects/node.png" alt="node">
+							<img src="assets/projects/mongo.png" alt="mongo">
+						</div>
+						<div class="portfolio__imgcontainer">
+							<img class=" portfolio__project-image" src="assets/projects/blood.PNG" alt="bloodlocator">
+						</div>
+						<div class="portfolio__project-desc p-0">
+							<p>Finally something complete using MERN stack. An app where one can find blood donor for
+								specific
+								blood group in the map (using <span style="color: blue;">MAPBOX</span> api), and also
+								add
+								their own entry to the database. Simple,
+								but usable.</p>
+						</div>
+					</div>
+				</a>
 
-		<div id="bio" class="bio my-5">
-			<p class="w-75 m-auto">Hello, I'm Ahmed. Currently studying CSE in American International University -
-				Bangladesh (<a href="https://www.aiub.edu/">AIUB</a>), and
-				learning
-				full stack web application development. Confident that I'm on the right path.
-				Contact me for any inquiry or assignment.</p>
+				<a href="https://fayeazahmed.github.io/notchaldal/index.html">
+					<div class="portfolio__project">
+						<div class="portfolio__tech-img">
+							<img src="assets/projects/react.png" alt="react">
+							<img src="assets/projects/django.png" alt="django">
+							<img src="assets/projects/postgresql.png" alt="postgresql">
+						</div>
+						<div class="portfolio__imgcontainer">
+							<img class=" portfolio__project-image" src="assets/projects/notchaldal.png"
+								alt="notchaldal">
+						</div>
+						<div class="portfolio__project-desc p-0">
+							<p> E-commerce web app, with django as backend taking care of postgresql migrations, and
+								react
+								on
+								front. This is a somewhat
+								repica of <span style="color: blue;">Chaldal.com</span> which is a great site to order
+								everyday stuff. This is quite a full stack project
+								for my current caliber. Accounts can be created by users, orders and
+								ordered products are added to their databases and relations established with foreign
+								keys.
+								If 10 orders are done from an account, it will get 10% discount on next orders. Django
+								restapi and their authentication system is used. In the front end, react with
+								react-router
+								and redux were used.
+								Product adding can be done from django admin dashboard, although as the server is hosted
+								on
+								heroku, new images can't be added as
+								heroku don't provide static file storage. So I just added 2/3 products per category, as
+								this
+								is just a demonstration.
+							</p>
+						</div>
+					</div>
+				</a>
+
+				<a href="https://fayeazahmed.github.io/just-another-social-media/#/">
+					<div class="portfolio__project">
+						<div class="portfolio__tech-img">
+							<img src="assets/projects/react.png" alt="react">
+							<img src="assets/projects/node.png" alt="node">
+							<img src="assets/projects/postgresql.png" alt="postgresql">
+						</div>
+						<div class="portfolio__imgcontainer">
+							<img class=" portfolio__project-image" src="assets/projects/socialmedia.PNG"
+								alt="socialmedia">
+						</div>
+						<div class="portfolio__project-desc p-0">
+							<p> ExpressJS and Postgres is used in the server, and React in client (PERN). So basically
+								we
+								can create an account with some basic
+								information, follow other accounts, create posts optionally with photo, and add like or
+								comment to a post. Feed will serve the contents posted by the user's account and the
+								accounts that are being 'followed' by the user. Profile will contain only the user's
+								posts.
+								You can delete a post if it's made by you, and delete a comment if it's made by you or
+								it
+								belongs to a post made by you.<br> Also <span style="color: #ed6601">firebase</span>
+								storage is used to store profile pictures and post photos. It's not a huge thing, but
+								probably I learned the MOST till now creating this project.
+							</p>
+						</div>
+					</div>
+				</a>
+
+			</section>
 		</div>
-
 
 	</main>
 	<footer class="contact" id="contact">
@@ -213,7 +276,6 @@
 			</div>
 		</a>
 	</footer>
-
 
 	<script src="assets/script.js"></script>
 </body>

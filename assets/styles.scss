@@ -6,6 +6,7 @@
   text-align: center;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: all 0.3s;
 }
 
 body {
@@ -17,12 +18,10 @@ body {
 nav {
   box-shadow: 0px 0px 6px black;
 
-  @media (max-width: 500px) {
-    font-size: 14px;
-  }
   p {
     font-family: "Architects Daughter", cursive;
     font-size: 25px;
+    text-align: left;
   }
 }
 
@@ -31,14 +30,39 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
-  max-height: calc(100vh - 225px);
+  height: 60vh;
   border-radius: 10px;
-  overflow-y: scroll;
+  overflow: hidden;
 
-  scrollbar-width: none; /* For Firefox */
-  -ms-overflow-style: none; /* For Internet Explorer and Edge */
-  &::-webkit-scrollbar {
-    width: 0px; /* For Chrome, Safari, and Opera */
+  .nav {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    button {
+      background-color: #1d212487;
+      color: white;
+      margin: 5px;
+      border-radius: 0;
+      z-index: 10;
+      border: 3px solid #9de069;
+      font-family: monospace;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
+
+      &:focus {
+        box-shadow: none;
+      }
+    }
+
+    .--activated {
+      border: 3px inset #9de069;
+      background-color: transparent;
+      color: black;
+    }
   }
 
   background: linear-gradient(
@@ -48,37 +72,194 @@ main {
   );
 }
 
-.introduction {
-  img {
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
+@keyframes spa {
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dp {
+  height: 160px;
+  object-fit: contain;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+
+  @media (max-width: 500px) {
+    height: 130px;
+    top: 60px;
+  }
+
+  &--transformed {
+    transform: translate(250%, -17%) scale(0.5);
+    left: unset;
+    top: 0;
+
+    @media (max-width: 500px) {
+      transform: translate(76%, -20%) scale(0.4);
+    }
+  }
+}
+
+.introduction {
+  margin-top: 20px;
+
+  &__info {
+    margin-top: 168px;
+  }
+
   h4,
   h6 {
     font-family: "Arimo", sans-serif;
   }
 }
 
-.portfolio {
-  margin-top: 50px;
+.projects {
+  .carousel-controller {
+    position: absolute;
+    top: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
 
-  h2 {
-    font-family: "Acme", sans-serif;
+    i {
+      color: rebeccapurple;
+      cursor: pointer;
+      &:hover {
+        transform: scale(1.2);
+      }
+
+      &:nth-child(1) {
+        visibility: hidden;
+      }
+    }
   }
+}
 
-  &__project {
+.projects,
+.introduction {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  animation: spa 0.3s;
+  display: none;
+  transform: translateX(-50%);
+}
+
+.page--activated {
+  display: block;
+}
+
+.buttons--activated {
+  transform: scale(1.6);
+  box-shadow: -0.6px 1px 2px #006818;
+
+  @media (max-width: 500px) {
+    transform: scale(1.4);
+  }
+}
+.technologies {
+  height: 50px;
+
+  &__container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    transition: all 0.3s;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
-    @media (max-width: 990px) {
-      flex-direction: column;
+  .stacked {
+    top: 0;
+
+    @media (max-width: 500px) {
+      top: 30px;
+    }
+  }
+
+  &__buttons {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transition: all 0.15s;
+    cursor: pointer;
+    margin: 0 10px;
+
+    @media (max-width: 500px) {
+      margin: 0 2px;
     }
 
     &:hover {
-      background-color: #c5d5cb;
+      @media (hover: hover) {
+        transform: scale(1.6);
+      }
+    }
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+
+    @media (max-width: 500px) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+}
+
+.portfolio {
+  margin-top: 30px;
+
+  .--activated {
+    transform: translateX(-50%);
+  }
+
+  .h2class {
+    position: absolute;
+    bottom: -140px;
+    left: 48%;
+    transform: translateX(-50%);
+    font-family: "Acme", sans-serif;
+
+    @media (max-width: 500px) {
+      bottom: -202px;
+    }
+  }
+
+  &__imgcontainer {
+    margin: 0 24px;
+
+    @media (max-width: 500px) {
+      margin: 0;
+    }
+  }
+
+  &__project {
+    position: absolute;
+    left: 50%;
+    transform: translateX(53%);
+    width: 95%;
+    border-radius: 5px;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+      width: 90%;
+      transform: translateX(60%);
+    }
+
+    &:hover {
+      background-color: rgba(157, 224, 105, 0.7);
     }
   }
 
@@ -87,19 +268,22 @@ main {
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    margin-left: 100px;
+    margin-left: 70px;
 
     @media (max-width: 990px) {
-      margin: 10px 0;
-      flex-direction: row !important;
+      margin: 5px 0;
+      flex-direction: row;
     }
 
     img {
       height: 85px;
       width: 85px;
+      object-fit: contain;
 
       @media (max-width: 990px) {
         margin: 0 5px;
+        height: 55px;
+        width: 55px;
       }
     }
   }
@@ -107,6 +291,10 @@ main {
   &__project-image {
     height: auto;
     width: 373px;
+
+    @media (max-width: 990px) {
+      width: 290px;
+    }
   }
 
   &__project-desc {
@@ -114,7 +302,6 @@ main {
 
     @media (max-width: 990px) {
       max-width: 100%;
-      margin-top: 10px;
     }
 
     p {
@@ -122,43 +309,46 @@ main {
       font-size: 1.17rem;
       text-align: end;
       padding-right: 3px;
+      max-height: 255px;
+      overflow-y: auto;
 
-      @media (min-width: 770px) {
-        max-height: 255px;
-        overflow-y: scroll;
-        &::-webkit-scrollbar {
-          background-color: rgba($color: #ffffff, $alpha: 0.4);
-          border-radius: 10px;
-        }
-        &::-webkit-scrollbar-thumb {
-          border-radius: 10px;
-          background-color: #fff;
-          background-image: -webkit-gradient(
-            linear,
-            40% 0%,
-            75% 84%,
-            from(#edf851),
-            to(#75ff7c)
-          );
-        }
+      @media (max-width: 500px) {
+        text-align: justify;
+        max-height: 120px;
+        margin-top: 5px;
       }
 
-      @media (max-width: 990px) {
-        text-align: center;
+      &::-webkit-scrollbar {
+        background-color: rgba($color: #ffffff, $alpha: 0.4);
+        border-radius: 10px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: #fff;
+        background-image: -webkit-gradient(
+          linear,
+          40% 0%,
+          75% 84%,
+          from(#edf851),
+          to(#75ff7c)
+        );
       }
     }
   }
 }
 
 .bio {
+  margin-top: 28px;
   p {
     font-family: "Slabo 27px", serif;
     font-size: 22px;
     font-weight: bold;
+    width: 75%;
+    margin: auto;
 
-    @media (max-width: 770px) {
-      padding: 0;
-      width: 100% !important;
+    @media (max-width: 500px) {
+      font-size: 18px;
+      width: 100%;
     }
   }
 
@@ -174,16 +364,13 @@ main {
   padding: 25px 15px;
   overflow: hidden;
 
-  @media (min-width: 770px) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-  @media (max-width: 770px) {
-    flex-direction: column;
-    margin-top: calc(100vh - 150px);
+  @media (max-width: 500px) {
+    padding: 15px 0;
   }
 
   &__element {
@@ -193,11 +380,6 @@ main {
     border-radius: 30px;
     margin: 0 -5px;
 
-    @media (max-width: 770px) {
-      width: 355px;
-      margin: 4px 0;
-    }
-
     p {
       white-space: nowrap;
       margin: 0;
@@ -205,20 +387,22 @@ main {
       overflow: hidden;
       transition: all 0.5s;
       color: white;
-
-      @media (max-width: 770px) {
-        max-width: 100%;
-      }
     }
 
     i {
       margin: auto 1rem;
       color: white;
+
+      @media (max-width: 500px) {
+        font-size: 1em;
+      }
     }
 
     &:hover {
-      p {
-        max-width: 300px;
+      @media (hover: hover) {
+        p {
+          max-width: 300px;
+        }
       }
     }
 
@@ -240,22 +424,6 @@ main {
   }
 }
 
-#scroll-bar {
-  height: 0%;
-  width: 10px;
-  background-color: #75ff7c;
-  position: absolute;
-  right: 0;
-  top: 0;
-  box-shadow: 1px 0px 6px red;
-  transition: height 0.3s;
-}
-
-.scroll-animation {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -263,4 +431,26 @@ a {
   &:hover {
     text-decoration: none;
   }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+  position: fixed;
+  top: -7px;
+  animation: bounce 2s infinite;
 }

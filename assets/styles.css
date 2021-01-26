@@ -5,6 +5,7 @@
   text-align: center;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition: all 0.3s;
 }
 
 body {
@@ -17,15 +18,10 @@ nav {
   box-shadow: 0px 0px 6px black;
 }
 
-@media (max-width: 500px) {
-  nav {
-    font-size: 14px;
-  }
-}
-
 nav p {
   font-family: "Architects Daughter", cursive;
   font-size: 25px;
+  text-align: left;
 }
 
 main {
@@ -33,25 +29,87 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   top: 50%;
-  max-height: calc(100vh - 225px);
+  height: 60vh;
   border-radius: 10px;
-  overflow-y: scroll;
-  scrollbar-width: none;
-  /* For Firefox */
-  -ms-overflow-style: none;
-  /* For Internet Explorer and Edge */
+  overflow: hidden;
   background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
 }
 
-main::-webkit-scrollbar {
-  width: 0px;
-  /* For Chrome, Safari, and Opera */
+main .nav {
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
-.introduction img {
-  height: 200px;
-  width: 200px;
+main .nav button {
+  background-color: #1d212487;
+  color: white;
+  margin: 5px;
+  border-radius: 0;
+  z-index: 10;
+  border: 3px solid #9de069;
+  font-family: monospace;
+}
+
+main .nav button:hover {
+  background-color: white;
+  color: black;
+}
+
+main .nav button:focus {
+  box-shadow: none;
+}
+
+main .nav .--activated {
+  border: 3px inset #9de069;
+  background-color: transparent;
+  color: black;
+}
+
+@keyframes spa {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.dp {
+  height: 160px;
+  object-fit: contain;
   border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+}
+
+@media (max-width: 500px) {
+  .dp {
+    height: 130px;
+    top: 60px;
+  }
+}
+
+.dp--transformed {
+  transform: translate(250%, -17%) scale(0.5);
+  left: unset;
+  top: 0;
+}
+
+@media (max-width: 500px) {
+  .dp--transformed {
+    transform: translate(76%, -20%) scale(0.4);
+  }
+}
+
+.introduction {
+  margin-top: 20px;
+}
+
+.introduction__info {
+  margin-top: 168px;
 }
 
 .introduction h4,
@@ -59,29 +117,163 @@ main::-webkit-scrollbar {
   font-family: "Arimo", sans-serif;
 }
 
-.portfolio {
-  margin-top: 50px;
+.projects .carousel-controller {
+  position: absolute;
+  top: 170px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
 }
 
-.portfolio h2 {
+.projects .carousel-controller i {
+  color: rebeccapurple;
+  cursor: pointer;
+}
+
+.projects .carousel-controller i:hover {
+  transform: scale(1.2);
+}
+
+.projects .carousel-controller i:nth-child(1) {
+  visibility: hidden;
+}
+
+.projects,
+.introduction {
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  animation: spa 0.3s;
+  display: none;
+  transform: translateX(-50%);
+}
+
+.page--activated {
+  display: block;
+}
+
+.buttons--activated {
+  transform: scale(1.6);
+  box-shadow: -0.6px 1px 2px #006818;
+}
+
+@media (max-width: 500px) {
+  .buttons--activated {
+    transform: scale(1.4);
+  }
+}
+
+.technologies {
+  height: 50px;
+}
+
+.technologies__container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.technologies .stacked {
+  top: 0;
+}
+
+@media (max-width: 500px) {
+  .technologies .stacked {
+    top: 30px;
+  }
+}
+
+.technologies__buttons {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: all 0.15s;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+@media (max-width: 500px) {
+  .technologies__buttons {
+    margin: 0 2px;
+  }
+}
+
+@media (hover: hover) {
+  .technologies__buttons:hover {
+    transform: scale(1.6);
+  }
+}
+
+.technologies img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@media (max-width: 500px) {
+  .technologies img {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+.portfolio {
+  margin-top: 30px;
+}
+
+.portfolio .--activated {
+  transform: translateX(-50%);
+}
+
+.portfolio .h2class {
+  position: absolute;
+  bottom: -140px;
+  left: 48%;
+  transform: translateX(-50%);
   font-family: "Acme", sans-serif;
 }
 
+@media (max-width: 500px) {
+  .portfolio .h2class {
+    bottom: -202px;
+  }
+}
+
+.portfolio__imgcontainer {
+  margin: 0 24px;
+}
+
+@media (max-width: 500px) {
+  .portfolio__imgcontainer {
+    margin: 0;
+  }
+}
+
 .portfolio__project {
+  position: absolute;
+  left: 50%;
+  transform: translateX(53%);
+  width: 95%;
+  border-radius: 5px;
+  padding: 15px 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 500px) {
   .portfolio__project {
     flex-direction: column;
+    width: 90%;
+    transform: translateX(60%);
   }
 }
 
 .portfolio__project:hover {
-  background-color: #c5d5cb;
+  background-color: rgba(157, 224, 105, 0.7);
 }
 
 .portfolio__tech-img {
@@ -89,30 +281,39 @@ main::-webkit-scrollbar {
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 
 @media (max-width: 990px) {
   .portfolio__tech-img {
-    margin: 10px 0;
-    flex-direction: row !important;
+    margin: 5px 0;
+    flex-direction: row;
   }
 }
 
 .portfolio__tech-img img {
   height: 85px;
   width: 85px;
+  object-fit: contain;
 }
 
 @media (max-width: 990px) {
   .portfolio__tech-img img {
     margin: 0 5px;
+    height: 55px;
+    width: 55px;
   }
 }
 
 .portfolio__project-image {
   height: auto;
   width: 373px;
+}
+
+@media (max-width: 990px) {
+  .portfolio__project-image {
+    width: 290px;
+  }
 }
 
 .portfolio__project-desc {
@@ -122,7 +323,6 @@ main::-webkit-scrollbar {
 @media (max-width: 990px) {
   .portfolio__project-desc {
     max-width: 100%;
-    margin-top: 10px;
   }
 }
 
@@ -131,40 +331,45 @@ main::-webkit-scrollbar {
   font-size: 1.17rem;
   text-align: end;
   padding-right: 3px;
+  max-height: 255px;
+  overflow-y: auto;
 }
 
-@media (min-width: 770px) {
+@media (max-width: 500px) {
   .portfolio__project-desc p {
-    max-height: 255px;
-    overflow-y: scroll;
-  }
-  .portfolio__project-desc p::-webkit-scrollbar {
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 10px;
-  }
-  .portfolio__project-desc p::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #fff;
-    background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#edf851), to(#75ff7c));
+    text-align: justify;
+    max-height: 120px;
+    margin-top: 5px;
   }
 }
 
-@media (max-width: 990px) {
-  .portfolio__project-desc p {
-    text-align: center;
-  }
+.portfolio__project-desc p::-webkit-scrollbar {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.portfolio__project-desc p::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, 40% 0%, 75% 84%, from(#edf851), to(#75ff7c));
+}
+
+.bio {
+  margin-top: 28px;
 }
 
 .bio p {
   font-family: "Slabo 27px", serif;
   font-size: 22px;
   font-weight: bold;
+  width: 75%;
+  margin: auto;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 500px) {
   .bio p {
-    padding: 0;
-    width: 100% !important;
+    font-size: 18px;
+    width: 100%;
   }
 }
 
@@ -178,21 +383,15 @@ main::-webkit-scrollbar {
   align-items: center;
   padding: 25px 15px;
   overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-@media (min-width: 770px) {
+@media (max-width: 500px) {
   .contact {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-}
-
-@media (max-width: 770px) {
-  .contact {
-    flex-direction: column;
-    margin-top: calc(100vh - 150px);
+    padding: 15px 0;
   }
 }
 
@@ -204,13 +403,6 @@ main::-webkit-scrollbar {
   margin: 0 -5px;
 }
 
-@media (max-width: 770px) {
-  .contact__element {
-    width: 355px;
-    margin: 4px 0;
-  }
-}
-
 .contact__element p {
   white-space: nowrap;
   margin: 0;
@@ -220,19 +412,21 @@ main::-webkit-scrollbar {
   color: white;
 }
 
-@media (max-width: 770px) {
-  .contact__element p {
-    max-width: 100%;
-  }
-}
-
 .contact__element i {
   margin: auto 1rem;
   color: white;
 }
 
-.contact__element:hover p {
-  max-width: 300px;
+@media (max-width: 500px) {
+  .contact__element i {
+    font-size: 1em;
+  }
+}
+
+@media (hover: hover) {
+  .contact__element:hover p {
+    max-width: 300px;
+  }
 }
 
 .contact__element--yahoo {
@@ -255,22 +449,6 @@ main::-webkit-scrollbar {
   background-color: rgba(63, 114, 155, 0.8);
 }
 
-#scroll-bar {
-  height: 0%;
-  width: 10px;
-  background-color: #75ff7c;
-  position: absolute;
-  right: 0;
-  top: 0;
-  box-shadow: 1px 0px 6px red;
-  transition: height 0.3s;
-}
-
-.scroll-animation {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 a {
   color: black;
   text-decoration: none;
@@ -278,5 +456,27 @@ a {
 
 a:hover {
   text-decoration: none;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.arrow {
+  position: fixed;
+  top: -7px;
+  animation: bounce 2s infinite;
 }
 /*# sourceMappingURL=styles.css.map */
