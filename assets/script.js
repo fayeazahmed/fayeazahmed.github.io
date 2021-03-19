@@ -36,4 +36,3 @@ function expandSection(position) {
 PROJECT_SECTIONS.forEach((div, position) => {
   div.querySelector("h4").addEventListener("click", () => expandSection(position));
 });
-navigate(1)
