@@ -101,6 +101,7 @@ main .nav .--activated {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   top: 30px;
+  z-index: 1;
 }
 
 @media (max-width: 500px) {
@@ -139,7 +140,7 @@ main .nav .--activated {
 
 .projects {
   height: 100%;
-  overflow-y: hidden;
+  overflow-y: auto;
   padding-top: 32px;
 }
 
@@ -149,6 +150,7 @@ main .nav .--activated {
   transition: all 0.3s;
   overflow-y: hidden;
   margin-top: 7px;
+  border-bottom: 1px solid #a5bf35;
 }
 
 .projects__sections h4 {
@@ -164,8 +166,8 @@ main .nav .--activated {
 }
 
 .projects__sections--activated {
-  max-height: 100%;
-  overflow-y: scroll;
+  max-height: 2000px;
+  overflow-y: auto;
 }
 
 .projects,
@@ -204,6 +206,13 @@ main .nav .--activated {
 
 .portfolio__imgcontainer {
   margin: 0 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 500px) {
@@ -292,6 +301,18 @@ main .nav .--activated {
   }
 }
 
+.portfolio__gitlink {
+  margin-top: 5px;
+}
+
+.portfolio__gitlink span {
+  font-family: monospace;
+  font-size: 17px;
+  background-color: #d0f989;
+  padding: 4px;
+  border-radius: 5px;
+}
+
 .portfolio__project-desc {
   max-width: 250px;
 }
@@ -317,6 +338,12 @@ main .nav .--activated {
     max-height: 120px;
     margin-top: 5px;
   }
+}
+
+.portfolio__project-desc--gfi span {
+  background-color: #ffdf56;
+  padding: 4px 10px;
+  border-radius: 14px;
 }
 
 .bio {
