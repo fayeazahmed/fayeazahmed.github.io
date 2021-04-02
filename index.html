@@ -256,6 +256,63 @@
 							</p>
 						</div>
 					</div>
+
+					<div class="portfolio__project">
+						<div class="portfolio__tech-img">
+							<img src="assets/projects/react.png" alt="react" />
+							<img src="assets/projects/nodesocket.png" alt="node" />
+							<img src="assets/projects/mongo.png" alt="mongo" />
+						</div>
+						<div class="portfolio__imgcontainer">
+							<a href="https://aiubgroupchats.herokuapp.com/">
+								<img
+									class="portfolio__project-image"
+									src="assets/projects/aiubgc.PNG"
+									alt="aiubgc"
+								/>
+							</a>
+							<a
+								class="portfolio__gitlink"
+								href="https://github.com/fayeazahmed/aiub-group-chats"
+								><span>
+									Go to repository
+									<i class="fa fa-github" aria-hidden="true"></i></span
+							></a>
+						</div>
+						<div class="portfolio__project-desc p-0">
+							<p>
+								This is a project I built to learn basics of web sockets, how
+								real time communication works and stuff. So I thought it would
+								be cool to make something like this, as during this pandemic, we
+								all really got used to with all the group chats for our taken
+								courses every semester. But later when everything will turn
+								normal (soon I hope), and we'll start having offline classes
+								again, it might be hard for some people to contact someone
+								online from a course s/he's taken. Yeah this app won't be the
+								first thing to come anyone's mind :v But this is basically the
+								reason/idea behind creating it. So here you'll just visit the
+								site, search for a course (only cs courses currently), and send
+								any message in its room. You don't really have to create an
+								account. The first time you land here, a random id is generated
+								and stored into localstorage for future references, so that you
+								can edit that id and add a name. The id isn't really random per
+								se, it's basically the number of milliseconds elapsed since
+								January 1, 1970 (Date.now() xD). So until clearing browsing
+								data, every time you enter the app, the messages you send will
+								refer to your existing 'account'. My priorities were to learn as
+								much about sockets and rooms, so didn't really go to the route
+								of authentication, that seemed an overkill. Tech used were-
+								node, socket io, react and mongodb. And before everything, I
+								scraped the site that contains info of all the cs courses in our
+								uni, and added them to database. So basically you start typing
+								the name of a course, it searches for them in db, returns the
+								matching room (course) names. After clicking a search result,
+								react &ltRoute /&gt renders the chat container with room info,
+								useEffect fetches old messages, adds client's socket to server
+								etc.
+							</p>
+						</div>
+					</div>
 				</section>
 
 				<section class="projects__sections">
