@@ -1,0 +1,173 @@
+[
+    {
+        "id": 1,
+        "section": "WEB",
+        "title": "Blood Locator BD",
+        "image": [
+            "react.png",
+            "node.png",
+            "mongo.png"
+        ],
+        "link": "https://bloodlocatorbd.herokuapp.com/",
+        "ss": "blood.PNG",
+        "git": "https://github.com/fayeazahmed/blood-locator",
+        "description": "My first complete full stack app using MERN. Here one can find blood donor for specific blood group in the map (using <span style='color: blue'>MAPBOX</span> api), and also add their own entry to the database. Simple, but usable.",
+        "featured": true
+    },
+    {
+        "id": 2,
+        "section": "WEB",
+        "title": "Codeigniter Ecommerce",
+        "image": [
+            "php.png",
+            "ci.png",
+            "mysql.png"
+        ],
+        "link": "https://e-commerce-codeigniter.000webhostapp.com/",
+        "ss": "ecommerce.PNG",
+        "git": "https://github.com/fayeazahmed/codeigniter-ecommerce",
+        "description": "As lot of the development stuff in my location is still being done using php and php based frameworks, thought it would be wise to learn this classic server side language and a simple framework. So this a sample e-commerce site made using codeigniter 4 with dynamic product adding system."
+    },
+    {
+        "id": 3,
+        "section": "WEB",
+        "title": "Not Chaldal",
+        "image": [
+            "react.png",
+            "django.png",
+            "postgresql.png"
+        ],
+        "link": "https://fayeazahmed.github.io/notchaldal/index.html",
+        "ss": "notchaldal.PNG",
+        "git": "https://github.com/fayeazahmed/notchaldal",
+        "description": "E-commerce web app, with django as backend taking care of postgresql migrations, and react on front. This is a somewhat repica of <span style='color: blue'>Chaldal.com</span> which is a great site to order everyday stuff. This is quite a full stack project for my current caliber. Accounts can be created by users, orders and ordered products are added to their databases and relations established with foreign keys. If 10 orders are done from an account, it will get 10% discount on next orders. Django restapi and their authentication system is used. In the front end, react with react-router and redux were used. Product adding can be done from django admin dashboard, although as the server is hosted on heroku, new images can't be added as heroku don't provide static file storage. So I just added 2/3 products per category, as this is just a demonstration."
+    },
+    {
+        "id": 4,
+        "section": "WEB",
+        "title": "Just Another Social Media",
+        "image": [
+            "react.png",
+            "node.png",
+            "postgresql.png"
+        ],
+        "link": "https://fayeazahmed.github.io/just-another-social-media/#/",
+        "ss": "socialmedia.PNG",
+        "git": "https://github.com/fayeazahmed/just-another-social-media",
+        "description": "ExpressJS and Postgres is used in the server, and React in client (PERN). So basically we can create an account with some basic information, follow other accounts, create posts optionally with photo, and add like or comment to a post. Feed will serve the contents posted by the user's account and the accounts that are being 'followed' by the user. Profile will contain only the user's posts. You can delete a post if it's made by you, and delete a comment if it's made by you or it belongs to a post made by you.<br /> Also <span style='color: #ed6601'>firebase</span> storage is used to store profile pictures and post photos. It's not a huge thing, but probably I learned the MOST till now creating this project.",
+        "featured": true
+    },
+    {
+        "id": 5,
+        "section": "WEB",
+        "title": "Everyday Journal",
+        "image": [
+            "react.png",
+            "aspnet.png",
+            "postgresql.png"
+        ],
+        "link": "https://fayeazahmed.github.io/everyday-journal",
+        "ss": "journal.PNG",
+        "git": "https://github.com/fayeazahmed/everyday-journal",
+        "description": "It's a classic diary like journal. You pick any date from the calendar and start writing whatever you want. So basically a user account keeps the jounral text stored for its respective date. Selecting a date creates entry in the database for that user and date, and if there's already a row in db for that speicific user and date, it retrieves it, so you can read or update. It's no ground breaking app, but after doing some full stack web with express/django, I wanted to get something up and running using asp.net asap to get myself comfortable with .NET. So I thought this would be cool, because I myself write journal everyday (on a diary in real life), so having a UI like that which can serve the same purpose felt the right project to build. So journals get stored in journal table with the date and userId. And if you are not logged in, then a random session id is generated and kept in local storage for reference, to keep the texts you write stored temporarily in another table . Then after authenticating, if there is data in the temporary table for that sessionId, then the respective rows are generated in the journal table for that user, and get deleted from temporary table. Used jwt for authentication. ASP .NET5 on back-end, React on front-end. Hosted the server on heroku using docker. So gained somewhat knowledge on docker as well."
+    },
+    {
+        "id": 6,
+        "section": "WEB",
+        "title": "AIUB Group Chats",
+        "image": [
+            "react.png",
+            "nodesocket.png",
+            "mongo.png"
+        ],
+        "link": "https://aiubgroupchats.herokuapp.com/",
+        "ss": "aiubgc.PNG",
+        "git": "https://github.com/fayeazahmed/aiub-group-chats",
+        "description": "This is a project I built to learn basics of web sockets, how real time communication works and stuff. So I thought it would be cool to make something like this, as during this pandemic, we all really got used to with all the group chats for our taken courses every semester. But later when everything will turn normal (soon I hope), and we'll start having offline classes again, it might be hard for some people to contact someone online from a course s/he's taken. Yeah this app won't be the first thing to come anyone's mind :v But this is basically the reason/idea behind creating it. So here you'll just visit the site, search for a course (only cs courses currently), and send any message in its room. You don't really have to create an account. The first time you land here, a random id is generated and stored into localstorage for future references, so that you can edit that id and add a name. The id isn't really random per se, it's basically the number of milliseconds elapsed since January 1, 1970 (Date.now() xD). So until clearing browsing data, every time you enter the app, the messages you send will refer to your existing 'account'. My priorities were to learn as much about sockets and rooms, so didn't really go to the route of authentication, that seemed an overkill. Tech used were- node, socket io, react and mongodb. And before everything, I scraped the site that contains info of all the cs courses in our uni, and added them to database. So basically you start typing the name of a course, it searches for them in db, returns the matching room (course) names. After clicking a search result, react &ltRoute /&gt renders the chat container with room info, useEffect fetches old messages, adds client's socket to server etc."
+    },
+    {
+        "id": 7,
+        "section": "WEB",
+        "title": "Laravel Techshop",
+        "image": [
+            "blade.png",
+            "laravel.png",
+            "postgresql.png"
+        ],
+        "link": "https://laravel-techshop.herokuapp.com/",
+        "ss": "techshop.PNG",
+        "git": "https://github.com/fayeazahmed/laravel-techshop",
+        "description": "Hello, this is Ahmed. It's a personal project e-commerce app. I learnt building similar website before, but now the main focus was to create a full functioning admin dashboard.<br /> So the customer end works in the regular way. You create account, add products to cart and checkout. There are category wise product pages and options to filter by price. There is account page to edit user info and see all order details.<br /> In admin area, you can create new categories and add new products. Existing categories and products can be modified or deleted. Also the details of all orders and users can be seen. Admin can add or remove from the list of featured products to feature in homepage.<br /> All product data is scraped from <a style='color: blue' href='https://www.startech.com.bd/'     >StarTech</a >.",
+        "featured": true
+    },
+    {
+        "id": 8,
+        "section": "WEB",
+        "title": "Spades Lite",
+        "image": [
+            "html5.png",
+            "js.png"
+        ],
+        "link": "https://fayeazahmed.github.io/spades-lite",
+        "ss": "spades.PNG",
+        "git": "https://github.com/fayeazahmed/spades-lite",
+        "description": "Pure vanilla javascript Spades card game. Well, not as intelligent as it sounds though :3 2 major things that I didn't attempt to implement considering it might take too long- There is no beginning call/bidding. You just keep on playing until you want and the points keeps getting added. Didn't bother including any 'finish game' feature as well, just close the tab :v And next thing is the other players (cpu) do not consider the cards that previously been played in current round while playing a card. It selects the best card that can be played in this bid ( if there's no higher card of leading suit, or a trump is already in play, then don't select a high card and some things like that). The icon of clubs suit is different cause that is the most similar thing I could find in fontawesome. It's not the best app to play Spades, but I definitely learnt a lot and did most problem solving making this."
+    },
+    {
+        "id": 9,
+        "section": "OTHERS",
+        "title": "Good First Issue",
+        "image": [
+            "python.png",
+            "flask.png"
+        ],
+        "link": "https://fayeazahmed.github.io/good-first-issue",
+        "ss": "gfi.PNG",
+        "git": "https://github.com/fayeazahmed/good-first-issue",
+        "description": "A web scraping project with python - beautfulsoup4. If one is looking to start contributing to open source, finding issues with the tag <span>good first issue</span> is a great way to start the journey. But it can be quite hard to find such issues manually going through different repositories. So here you search a term, flask server recieves it, web scraper searches for that in github, collects results for upto 5 pages, then goes thorugh them to find issues labeled with 'good first issue'. Then returns the data which is fetched using axios in client side. Performance wise, maybe using python wasn't really the best idea. I did a web scraping project with c# once, compared to that, this felt quite slower. But it's made primarily for project purposes, and I really wanted to use python in it. this.",
+        "classes": [
+            "portfolio__project-desc--gfi"
+        ],
+        "featured": true
+    },
+    {
+        "id": 10,
+        "section": "OTHERS",
+        "title": "Foosball",
+        "image": [
+            "html5.png",
+            "js.png"
+        ],
+        "link": "https://fayeazahmed.github.io/foosball",
+        "ss": "foosball.PNG",
+        "git": "https://github.com/fayeazahmed/foosball",
+        "description": "I thought of building this project while trying to learn HTML Canvas. This is also the first project where I commented everything out properly so that anyone can understand whatever's happening wherever. So basically there are two canvases. One is for drawing the background field only. Used this extra canvas so that the whole field doesn't have to be drawn at every render. Another canvas holds the actual dynamic game objects like handle, players and the ball.<br /> The movements were tracked in the 2d coordinate using Vector class. This is the simplified version of what's happening in the game loop- Ball is constantly getting redrawn on current position and position is changing according to velocity. Ball direction and velocity changes when collided with other player or border according to handle state (leave/kick etc). If ball goes through any goal line, score is updated and everything is redrawn if a player scores ten. Details in github."
+    },
+    {
+        "id": 11,
+        "section": "WINDOWS",
+        "title": "Torrent Helper",
+        "image": [
+            "csharp.jpg"
+        ],
+        "link": "https://drive.google.com/drive/folders/1hcI1FPqB7KVpfHqdIDfaXQaewa4oxJNl?usp=sharing",
+        "ss": "torrent.PNG",
+        "git": "https://github.com/fayeazahmed/torrent-helper",
+        "description": "The first time I tried playing around with dot NET. This is a winform web scraping windows application. Enter name, and it will search for it in the piratebay, and show the list of only the important info like name of torrents, number of seed, leech and most importantly the magnet link. So just search, click magnet and default torrent client or appropriate pop up will show up.",
+        "featured": true
+    },
+    {
+        "id": 12,
+        "section": "ANDROID",
+        "title": "Blood Locator Android",
+        "image": [
+            "java.png",
+            "studio.jpg"
+        ],
+        "link": "https://drive.google.com/file/d/1Uu8R-bnfK-M64yqX1QOfoyhtYcpzxB_X/view?usp=sharing",
+        "ss": "android.jpg",
+        "git": "https://github.com/fayeazahmed/blood-locator-android",
+        "description": "I built this project in order to learn basics of android studio. Blood Locator is an app where we can search for blood donors filtered by blood group on the map (powered by <span style='color: blue'>MAPBOX</span>), then look up contact details. I took this idea from one of the first personal projects I made, the web app of same name. The donor records can be added by the user themselves.<br /> I tried to use the same mongo database attached to the web app at first, but had a hard time doing it in a efficient way. So I just created a firebase application and used that as the back-end and/or database to this project. Learned a lot about android apps and making of them through building this small project.",
+        "featured": true
+    }
+]
