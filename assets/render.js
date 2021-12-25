@@ -13,7 +13,7 @@ HEADERS?.forEach(item => {
 
 const clearMain = () => MAIN.innerHTML = ""
 
-const placeContent = async () => {
+const placeContent = () => {
     switch (selectedSection) {
         case "featured":
             renderInMain(DATA.filter(item => item.featured))
