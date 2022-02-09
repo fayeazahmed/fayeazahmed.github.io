@@ -169,5 +169,20 @@
         "git": "https://github.com/fayeazahmed/blood-locator-android",
         "description": "I built this project in order to learn basics of android studio. Blood Locator is an app where we can search for blood donors filtered by blood group on the map (powered by <span style='color: blue'>MAPBOX</span>), then look up contact details. I took this idea from one of the first personal projects I made, the web app of same name. The donor records can be added by the user themselves.<br /> I tried to use the same mongo database attached to the web app at first, but had a hard time doing it in a efficient way. So I just created a firebase application and used that as the back-end and/or database to this project. Learned a lot about android apps and making of them through building this small project.",
         "featured": true
+    },
+    {
+        "id": 13,
+        "section": "WEB",
+        "title": "Jira SoftER",
+        "image": [
+            "react.png",
+            "node.png",
+            "mongo.png"
+        ],
+        "link": "https://jirasofter.herokuapp.com/",
+        "ss": "jira.PNG",
+        "git": "https://github.com/fayeazahmed/jira-softer",
+        "description": "Jira SoftER is basically a very light version of Jira. I thought this would be the best project to demonstrate all the things I learned through full stack development journey and use all techniques most efficiently with the experience I had till now. I tried to remake the agile development part of Jira. You can create account then create a team or get added to other teams in order to assign issues to others or get assigned yourself. Project lead can create or modify issues and assign them to team members. There is backlog for all issues, sprint for creating a sprint with some issues and roadmap for tracking all the epics and sub-issues under them including the completion percentage.",
+        "featured": true
     }
 ]
