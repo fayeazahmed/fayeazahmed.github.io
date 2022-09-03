@@ -1,5 +1,6 @@
 const MAIN = document.querySelector(".content")
 const HEADERS = document.querySelectorAll(".navigation__header")
+const toggleDark = document.getElementById("darkmode");
 let selectedSection = "featured"
 let DATA
 fetch("/assets/data/projects.json").then(res => res.json().then(res => DATA = res))
@@ -25,7 +26,7 @@ const placeContent = () => {
 }
 
 const changeNav = () => HEADERS?.forEach(item => {
-    if(item.getAttribute("key") === selectedSection) item.classList.add("navigation__header--active")
+    if (item.getAttribute("key") === selectedSection) item.classList.add("navigation__header--active")
     else item.classList.remove("navigation__header--active")
 })
 
@@ -40,10 +41,10 @@ const renderInMain = elements => elements.forEach(item => {
     div.classList.add("project")
     div.innerHTML = `
         <div class="project__tech-img">
-            ${ getImages(item.image) }
+            ${getImages(item.image)}
         </div>
         <p class="project__title">${item.title}</p>
-        <p class="project__type">${item.section}</p>
+        <p class="project__type ${toggleDark.checked ? "text-white-50" : ""}">${item.section}</p>
         `
     div.addEventListener("click", () => renderProject(item.id))
     MAIN.appendChild(div)
@@ -56,7 +57,7 @@ const renderProject = pid => {
     div.appendChild(getBackButton())
     div.innerHTML += `
     <div class="portfolio__tech-img">
-        ${ getImages(image) }
+        ${getImages(image)}
     </div>
     <div class="portfolio__imgcontainer">
         <a href="${link}">
@@ -81,8 +82,8 @@ const renderProject = pid => {
     </div>
     `
     clearMain()
-    MAIN.appendChild(div)	
-    document.querySelector(".backBtn").addEventListener("click", changeMain)				
+    MAIN.appendChild(div)
+    document.querySelector(".backBtn").addEventListener("click", changeMain)
 }
 
 const getBackButton = () => {
