@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Slabo+27px&family=Architects+Daughter&family=Arimo&family=Cormorant+Unicase:wght@600&family=Acme&family=Vollkorn:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Slabo+27px&family=Saira:wght@300&family=Architects+Daughter&family=Arimo&family=Cormorant+Unicase:wght@600&family=Acme&family=Vollkorn:wght@500&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -206,6 +206,44 @@ main .nav .--activated {
 .introduction h4,
 .introduction h6 {
   font-family: "Arimo", sans-serif;
+}
+
+.careers {
+  -webkit-animation: spa 0.3s;
+          animation: spa 0.3s;
+  display: none;
+}
+
+.careers__content {
+  padding: 18px;
+  background-color: #d2f58a;
+  padding: 18px;
+  border-radius: 5px;
+}
+
+.careers__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.careers__link a {
+  font-family: "Saira", sans-serif;
+  font-size: 30px;
+}
+
+.careers__link a:hover {
+  text-decoration: none;
+}
+
+.careers__position {
+  text-align: left;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0;
 }
 
 .project {
@@ -516,7 +554,7 @@ main .nav .--activated {
 }
 
 .bio a {
-  color: #9100ff;
+  color: #21749c;
 }
 
 .contact {
@@ -541,6 +579,10 @@ main .nav .--activated {
   .contact {
     padding: 15px 0;
   }
+}
+
+.contact a:hover {
+  text-decoration: none;
 }
 
 .contact__element {
@@ -604,10 +646,6 @@ main .nav .--activated {
 
 a {
   color: black;
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: none;
 }
 

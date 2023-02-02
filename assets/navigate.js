@@ -15,7 +15,7 @@ function navigate(position) {
 NAV_BTNS.forEach((button, position) => {
   button.addEventListener("click", () => {
     navigate(position);
-    if (position === 1) changeMain();
+    changeMain(position);
   });
 });
 

@@ -1,6 +1,7 @@
 const MAIN = document.querySelector(".content")
 const HEADERS = document.querySelectorAll(".navigation__header")
 const toggleDark = document.getElementById("darkmode");
+const P_INDEX = 2;
 let selectedSection = "featured"
 let DATA
 fetch("/assets/data/projects.json").then(res => res.json().then(res => DATA = res))
@@ -8,7 +9,7 @@ fetch("/assets/data/projects.json").then(res => res.json().then(res => DATA = re
 HEADERS?.forEach(item => {
     item.addEventListener("click", (e) => {
         selectedSection = e.target.getAttribute("key")
-        changeMain()
+        changeMain(P_INDEX)
     })
 })
 
@@ -30,10 +31,11 @@ const changeNav = () => HEADERS?.forEach(item => {
     else item.classList.remove("navigation__header--active")
 })
 
-const changeMain = () => {
+const changeMain = (position) => {
     clearMain()
     changeNav()
-    placeContent()
+    if (position === 2)
+        placeContent()
 }
 
 const renderInMain = elements => elements.forEach(item => {
@@ -83,7 +85,7 @@ const renderProject = pid => {
     `
     clearMain()
     MAIN.appendChild(div)
-    document.querySelector(".backBtn").addEventListener("click", changeMain)
+    document.querySelector(".backBtn").addEventListener("click", () => changeMain(P_INDEX))
 }
 
 const getBackButton = () => {
