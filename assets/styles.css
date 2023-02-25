@@ -209,16 +209,18 @@ main .nav .--activated {
 }
 
 .careers {
+  margin-top: 50px;
   -webkit-animation: spa 0.3s;
           animation: spa 0.3s;
   display: none;
 }
 
 .careers__content {
-  padding: 18px;
+  border-left: 3px solid #3c8540;
   background-color: #d2f58a;
-  padding: 18px;
   border-radius: 5px;
+  margin-top: 8px;
+  padding: 12px;
 }
 
 .careers__link {
