@@ -4,11 +4,14 @@
 		<meta charset="utf-8" />
 		<title>Portfolio | Fayeaz Ahmed</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="" />
-		<meta name="author" content="" />
-		<meta property="og:description" content="Portfolio of Fayeaz Ahmed" />
-		<meta property="og:image" content="assets/icon.png" />
-		<link rel="shortcut icon" href="assets/icon.png" type="image/x-icon" />
+		<meta name="description" content="Ahmed's portfolio site" />
+		<meta name="author" content="Fayeaz Ahmed" />
+		<meta property="og:image" content="assets/images/icon.png" />
+		<link
+			rel="shortcut icon"
+			href="assets/images/icon.png"
+			type="image/x-icon"
+		/>
 		<!-- styles -->
 		<link
 			rel="stylesheet"
@@ -21,13 +24,13 @@
 			rel="stylesheet"
 			type="text/css"
 		/>
-		<link rel="stylesheet" href="assets/styles.css" />
+		<link rel="stylesheet" href="assets/styles/styles.css" />
 	</head>
 
 	<body>
 		<nav>
 			<div class="container d-flex justify-content-between align-items-center">
-				<p>Fayeaz Ahmed</p>
+				<p class="light-mode--text">Fayeaz Ahmed</p>
 				<label class="switch">
 					<input id="darkmode" type="checkbox" />
 					<span class="slider round"></span>
@@ -37,14 +40,14 @@
 
 		<main class="container py-4">
 			<div class="nav">
-				<button class="btn --activated">Intro</button>
-				<button class="btn">Career</button>
-				<button class="btn">Learning projects</button>
+				<button class="navBtn navBtn--activated">Intro</button>
+				<button class="navBtn">Career</button>
+				<button class="navBtn">Learning projects</button>
 			</div>
 
 			<div class="spa introduction page--activated">
 				<div>
-					<img class="dp" src="assets/dp.png" alt="display picture" />
+					<img class="dp" src="assets/images/dp.png" alt="=picture" />
 					<h4 class="m-0">FAYEAZ AHMED</h4>
 					<h6 class="m-0">
 						<i class="fa fa-map-marker"></i> DHAKA, BANGLADESH
@@ -53,10 +56,9 @@
 
 				<div id="bio" class="bio container">
 					<p>
-						Hello, I'm Ahmed. A recent CSE grad from (<a
-							href="https://www.aiub.edu/"
-							>AIUB</a
-						>), started as Software Engineer at
+						Hello, I'm Ahmed. CSE grad (2023) from American International
+						University - Bangladesh (<a href="https://www.aiub.edu/">AIUB</a>),
+						started as Software Engineer at
 						<a href="https://www.apurba.com.bd/">Apurba Technologies Ltd.</a>
 						In a journey of growing my career in software industry.
 					</p>
@@ -70,58 +72,16 @@
 					</div>
 					<p class="careers__position">Software Engineer</p>
 					<p class="project__type m-0 text-left">JAVA</p>
-					<h6 class="text-left m-0">February, 2023 -</h6>
+					<h6 class="text-left m-0">
+						February, 2023 - Present ·
+						<span class="careers__duration" style="font-size: 12px"></span>
+					</h6>
 				</div>
 			</div>
 			<div class="spa projects container">
 				<div class="navigation">
 					<h4 key="featured" class="navigation__header">Featured</h4>
 					<h4 key="all" class="navigation__header">All</h4>
-				</div>
-				<div class="content">
-					<!-- <div class="project">
-						<div class="project__tech-img">
-							<img src="assets/projects/react.png" alt="react" />
-							<img src="assets/projects/aspnet.png" alt="dotnet" />
-							<img src="assets/projects/postgresql.png" alt="postgresql" />
-						</div>
-						<p class="project__title">Everyday Journal</p>
-						<p class="project__type">WEB</p>
-					</div> -->
-					<!-- <div class="portfolio__project">
-						<div class="backBtn">
-							<i class="fa fa-2x fa-chevron-circle-left" aria-hidden="true"></i>
-						</div>
-						<div class="portfolio__tech-img">
-							<img src="assets/projects/react.png" alt="react" />
-							<img src="assets/projects/node.png" alt="node" />
-							<img src="assets/projects/mongo.png" alt="mongo" />
-						</div>
-						<div class="portfolio__imgcontainer">
-							<a href="https://bloodlocatorbd.herokuapp.com/">
-								<img
-									class="portfolio__project-image"
-									src="assets/projects/blood.PNG"
-									alt="bloodlocator"
-								/>
-							</a>
-							<a
-								class="portfolio__gitlink"
-								href="https://github.com/fayeazahmed/blood-locator"
-								><span>
-									Go to repository
-									<i class="fa fa-github" aria-hidden="true"></i></span
-							></a>
-						</div>
-						<div class="portfolio__project-desc p-0">
-							<p>
-								My first complete full stack app using MERN. Here one can find
-								blood donor for specific blood group in the map (using
-								<span style="color: blue">MAPBOX</span> api), and also add their
-								own entry to the database. Simple, but usable.
-							</p>
-						</div>
-					</div> -->
 				</div>
 			</div>
 		</main>
@@ -162,7 +122,7 @@
 			</a>
 		</footer>
 
-		<script src="assets/render.js"></script>
-		<script src="assets/navigate.js"></script>
+		<script src="scripts/content.js"></script>
+		<script src="scripts/navigate.js"></script>
 	</body>
 </html>

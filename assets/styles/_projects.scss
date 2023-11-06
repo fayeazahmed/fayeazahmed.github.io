@@ -1,0 +1,189 @@
+.project {
+	display: flex;
+	align-items: center;
+	border-left: 2px solid #3c8540;
+	margin-top: 8px;
+	padding-left: 10px;
+	transition: all 0.3s;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #d2f58a;
+	}
+
+	&__tech-img {
+		img {
+			height: 55px;
+			width: 55px;
+			object-fit: contain;
+
+			@media (max-width: 500px) {
+				height: 35px;
+				width: 35px;
+			}
+		}
+
+		@media (min-width: 500px) {
+			min-width: 170px;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-family: "Arimo";
+		font-size: 20px;
+		border-right: 2px solid #3c8540;
+		padding: 0 25px;
+
+		@media (min-width: 500px) {
+			min-width: 210px;
+			text-align: left;
+			padding: 0 !important;
+		}
+	}
+
+	&__type {
+		margin: 0;
+		margin-left: 7px;
+		font-size: 15px;
+		font-style: italic;
+		font-weight: 800;
+		color: #157259;
+
+		@media (max-width: 500px) {
+			font-weight: 400;
+		}
+	}
+}
+
+.projects {
+	height: 52vh;
+	overflow-y: auto;
+	margin-top: 50px;
+}
+
+.projects,
+.introduction {
+	position: absolute;
+	width: 100%;
+	left: 50%;
+	animation: spa 0.3s;
+	display: none;
+	transform: translateX(-50%);
+}
+
+@keyframes project {
+	from {
+		width: 0;
+		opacity: 0;
+	}
+	to {
+		width: auto;
+		opacity: 1;
+	}
+}
+
+.portfolio {
+	&__imgcontainer {
+		margin: 0 24px;
+		display: flex;
+		flex-direction: column;
+
+		@media (max-width: 500px) {
+			margin: 0;
+		}
+	}
+
+	&__project {
+		position: relative;
+		border-radius: 5px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		animation: project 0.2s;
+		height: 52vh;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+		}
+
+		&:hover {
+			background-color: rgba(157, 224, 105, 0.7);
+		}
+
+		.backBtn {
+			position: absolute;
+			left: 35px;
+			top: 0;
+			color: darkred;
+			cursor: pointer;
+		}
+	}
+
+	&__tech-img {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+
+		@media (max-width: 990px) {
+			margin: 5px 0;
+			flex-direction: row;
+		}
+
+		img {
+			height: 100px;
+			width: 100px;
+			object-fit: contain;
+
+			@media (max-width: 990px) {
+				margin: 0 5px;
+				height: 55px;
+				width: 55px;
+			}
+		}
+	}
+
+	&__project-image {
+		height: auto;
+		width: 373px;
+
+		@media (max-width: 990px) {
+			width: 290px;
+		}
+	}
+
+	&__gitlink {
+		margin-top: 5px;
+
+		span {
+			font-family: monospace;
+			font-size: 17px;
+			background-color: #d0f989;
+			padding: 4px;
+			border-radius: 5px;
+		}
+	}
+
+	&__project-desc {
+		max-width: 260px;
+		font-family: "Vollkorn", serif;
+		font-size: 1.17rem;
+		text-align: end;
+		padding-right: 16px;
+		overflow-y: auto;
+		max-height: 40vh;
+
+		@media (max-width: 990px) {
+			max-width: 100%;
+			text-align: justify;
+			margin-top: 5px;
+		}
+
+		&--gfi span {
+			background-color: #ffdf56;
+			padding: 4px 10px;
+			border-radius: 14px;
+		}
+	}
+}

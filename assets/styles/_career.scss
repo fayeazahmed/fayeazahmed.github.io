@@ -1,0 +1,34 @@
+.careers {
+	margin-top: 50px;
+	animation: spa 0.3s;
+	display: none;
+
+	&__content {
+		border-left: 3px solid #3c8540;
+		background-color: #d2f58a;
+		border-radius: 5px;
+		margin-top: 8px;
+		padding: 12px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+
+		a {
+			font-family: "Saira", sans-serif;
+			font-size: 30px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__position {
+		text-align: left;
+		font-weight: 700;
+		font-size: 20px;
+		margin: 0;
+	}
+}
