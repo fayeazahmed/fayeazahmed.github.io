@@ -9,6 +9,7 @@ const changeMain = (position) => {
     clearMain()
     if (position === 2)
         renderInMain(DATA.filter(item => item.featured))
+    setThemeSettings()
 }
 
 const changeNav = () => HEADERS?.forEach(item => {
@@ -24,7 +25,7 @@ const renderInMain = elements => elements.forEach(item => {
             ${getImages(item.image)}
         </div>
         <p class="project__title">${item.title}</p>
-        <p class="project__type ${TOGGLE_DARK.checked ? "text-white-50" : ""}">${item.section}</p>
+        <p class="project__type">${item.section}</p>
         `
     div.addEventListener("click", () => renderProject(item.id))
     MAIN.appendChild(div)

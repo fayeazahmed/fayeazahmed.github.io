@@ -18,29 +18,3 @@ NAV_BTNS.forEach((button, position) => {
     changeMain(position);
   });
 });
-
-TOGGLE_DARK.addEventListener("change", (e) => {
-  if (e.target.checked) {
-    document.body.classList.add("dark-mode--body");
-    document.querySelector("nav").classList.add("dark-mode--text");
-    document.querySelector(".introduction").classList.add("dark-mode--text");
-    document.querySelector("main").classList.add("dark-mode--main");
-    document
-      .querySelectorAll(".bio a")
-      .forEach((a) => a.classList.add("dark-mode--link"));
-    document
-      .querySelectorAll(".project__title")
-      .forEach((p) => p.classList.add("dark-mode--text"));
-  } else {
-    document.body.classList.remove("dark-mode--body");
-    document.querySelector("nav").classList.remove("dark-mode--text");
-    document.querySelector(".introduction").classList.remove("dark-mode--text");
-    document.querySelector("main").classList.remove("dark-mode--main");
-    document
-      .querySelectorAll(".bio a")
-      .forEach((a) => a.classList.remove("dark-mode--link"));
-    document
-      .querySelectorAll(".project__title")
-      .forEach((p) => p.classList.remove("dark-modtextype"));
-  }
-});
